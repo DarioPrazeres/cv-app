@@ -31,11 +31,17 @@ class Experience extends Component{
         });
         console.log(this.state);
         this.props.parentCallback(this.state);
+        this.setState({
+            nameC: '',
+            job: '',
+            dateS: '',
+            dateE: '',
+            details: '',
+        });
     }
     render(){
         return(
             <>
-                <h3>Experience</h3>
                 <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label>Company Name</label>

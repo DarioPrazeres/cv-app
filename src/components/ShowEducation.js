@@ -15,7 +15,7 @@ const ShowEducation = (props) => {
                 <h5>{datta.school}</h5>
                 <h6>{datta.grade}</h6>
                 <p>{datta.year}</p>
-            <button onClick={()=>show(datta.cont)}>Rem</button>
+            <button onClick={()=>show(datta.cont)} id="rem" className="btn btn-dark">Rem</button>
           </li>;
         })}
       </ul>

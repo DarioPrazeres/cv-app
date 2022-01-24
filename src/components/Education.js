@@ -26,14 +26,19 @@ class Education extends Component{
         event.preventDefault();
         this.setState({
             cont: this.state.cont + 1,
-        })
+        });
         console.log(this.state);
         this.props.parentCallback(this.state);
+        this.setState({
+            course: '',
+            school: '',
+            grade: '',
+            year: '',
+        });
     }
     render(){
         return(
             <div>
-                <h3>Education</h3>
                 <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label>Course/Degree</label>

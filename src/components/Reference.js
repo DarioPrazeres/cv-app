@@ -28,11 +28,17 @@ class Reference extends Component{
             cont: this.state.cont +1,
         });
         this.props.parentCallback(this.state);
+        this.setState({
+            nameR: '',
+            phone: '',
+            job: '',
+            nameC: '',
+            email: '',
+        });
     }
     render(){
         return (
             <>
-                <h3>Reference</h3>
                 <form  onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label>Referee's Name</label>

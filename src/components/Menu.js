@@ -124,6 +124,7 @@ class Menu extends Component{
         
     }
     showView(idShow, idHide){
+        
         document.getElementById(idShow).classList.remove('d-none');
         document.getElementById(idShow).classList.add('d-print-none');
         document.getElementById(idHide).classList.remove('d-print-none');
@@ -145,38 +146,39 @@ class Menu extends Component{
                     </div>
                     <div className="container-fluid d-none" id='personal'>
                         <Personal parentCallback={this.handleCallBack} />
-                    </div>
-                    <div className="container-fluid" id={styles.center}>
+                        <div className="container-fluid" id={styles.center}>
                         <h3>{this.state.personal.name}</h3>
                         <h5>{this.state.personal.adress}</h5>
                         <h5>{this.state.personal.email}</h5>
                         {this.state.personal.phone}
                     </div>
+                    </div>
+                    
                     <button type="button" onClick={()=>this.showMe('education')} className="btn  mb-2" id={styles.btn}><img src={school} alt="icon"/>Education</button>
                     <div className="container-fluid d-none" id='education'> 
-                        <Education parentCallback={this.hundleEducation} />                      
-                    </div>
-                    <div className="container-fluid" >                       
-                        <ShowEducation dattas={this.state.educations} parent={this.hundleDeleteEdu} />
+                        <Education parentCallback={this.hundleEducation} /> 
+                        <ShowEducation dattas={this.state.educations} parent={this.hundleDeleteEdu} />                     
                     </div>
                     <button type="button" onClick={()=>this.showMe('experience')} className="btn  mb-2" id={styles.btn}><img src={expert} alt="icon"/>Profisional Experience</button>
                     <div className="container-fluid d-none" id='experience'>                        
                       <Experience parentCallback={this.hundleExperience} />
-                    </div>
-                   
+                      <View exps={this.state.experience} parent={this.hundleDeleteEdu} />
+                    </div>                   
                     <button type="button" onClick={()=>this.showMe('skill')} className="btn  mb-2" id={styles.btn}><img src={skill} alt="icon"/>Skill</button>
                     <div className="container-fluid d-none" id='skill'>                        
                         <Skill parentCallback={this.hundleSkill} />
+                        <ViewSkill skills={this.state.skills} parent={this.hundleDeleteSkill} /> 
                     </div>
                     <button type="button" onClick={()=>this.showMe('object')} className="btn  mb-2" id={styles.btn}><img src={target} alt="icon"/>Objective</button>
                     <div className="container-fluid d-none" id='object'>                        
                         <Objective parentCallback={this.hundleObjective}/>
+                        <h5>{this.state.objective}</h5>  
                     </div>
                     <button type="button" onClick={()=>this.showMe('refer')} className="btn  mb-2" id={styles.btn}><img src={reference} alt="icon"/>Reference</button>
                     <div className="container-fluid d-none" id='refer'>                        
                         <Reference parentCallback={this.hundleReference} />
-                    </div>                   
-                    
+                        <ViewReference refs={this.state.reference} parent={this.hundleDeleteRefer} /> 
+                    </div>                                       
                 </div>   
                 <div className="container-fluid p-4 d-none" id="view">
                     <div className="container-fluid" id={styles.center}>
@@ -185,11 +187,18 @@ class Menu extends Component{
                         <h5>{this.state.personal.email}</h5>
                         {this.state.personal.phone}
                     </div>
+                    <hr/>
+                    <div className="container-fluid">
+                        <h3>Education</h3>
+                        <hr/>
+                        <ShowEducation dattas={this.state.educations} parent={this.hundleDeleteEdu} />
+                    </div>
                     <div className="container-fluid">
                         <View exps={this.state.experience} parent={this.hundleDeleteEdu} />                       
                     </div>
                     <div className="container-fluid">
-                        <h3>Objective</h3>    
+                        <h3>Objective</h3>
+                        <hr/>    
                         <h5>{this.state.objective}</h5>          
                     </div>
                     <div className="container-fluid">

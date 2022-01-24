@@ -23,11 +23,13 @@ class Skill extends Component{
             cont: this.state.cont +1,
         });
         this.props.parentCallback(this.state);
+        this.setState({
+            skill:'',
+        });
     }
     render(){
         return(
             <>
-                <h3>Skill</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>

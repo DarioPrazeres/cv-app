@@ -21,7 +21,6 @@ class Objective extends Component{
     render(){
         return (
             <>
-                <h3>Objective</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <textarea className="form-control" value={this.state.text} onChange={this.handleChange}></textarea>

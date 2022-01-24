@@ -9,6 +9,7 @@ const ViewReference = (props) => {
     return (
         <div>
             <h3>Reference</h3>
+            <hr/>
             <ul>{refs.map((exp) =>
                     <li key={exp.cont}>
                         <h4>{exp.nameR}</h4>
@@ -16,7 +17,7 @@ const ViewReference = (props) => {
                         <h6>{exp.nameC}</h6>
                         <p>{exp.email}</p>
                         <p>{exp.phone}</p>
-                        <button className="btn btn-dark" onClick={()=>showCont(exp.cont)}>Remove</button>
+                        <button className="btn btn-dark" onClick={()=>showCont(exp.cont)} id="rem">Remove</button>
                     </li>)} 
             
             </ul>

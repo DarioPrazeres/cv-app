@@ -8,11 +8,12 @@ const ViewSkill = (props) => {
     }
     return (
         <div>
-            <h3>Experience</h3>
+            <h3>Skill</h3>
+            <hr/>
             <ul>{skills.map((exp) =>
                     <li key={exp.cont}>
                         <h5>{exp.skill}</h5>
-                        <button className="btn btn-dark" onClick={()=>showCont(exp.cont)}>Remove</button>
+                        <button className="btn btn-dark" onClick={()=>showCont(exp.cont)} id="rem">Remove</button>
                     </li>)} 
             
             </ul>

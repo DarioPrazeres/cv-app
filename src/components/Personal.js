@@ -32,7 +32,6 @@ class Personal extends Component{
     render(){
         return (
             <>
-                <h3>Personal Details</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>Name</label>
