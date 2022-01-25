@@ -180,7 +180,7 @@ class Menu extends Component{
                         <ViewReference refs={this.state.reference} parent={this.hundleDeleteRefer} /> 
                     </div>                                       
                 </div>   
-                <div className="container-fluid p-4 d-none" id="view">
+                <div className="container-fluid d-none" id="view">
                     <div className="container-fluid" id={styles.center}>
                         <h3>{this.state.personal.name}</h3>
                         <h5>{this.state.personal.adress}</h5>
