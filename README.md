@@ -1,6 +1,6 @@
-# Odin-project
+# CV-App
 
-<h1 align="center">Odin-project</h1>
+<h1 align="center">CV-App</h1>
 <p>This project was build with React, JavaScript, Css (Bootstrap). This exercise make part of The Odin Project curriculium!</p>
 <div align="center">
   <h3>
