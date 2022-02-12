@@ -3,7 +3,6 @@ import React from "react";
 const ViewSkill = (props) => {
     const { skills } = props;
     const showCont=(value)=>{
-        console.log(value);
         props.parent(value);
     }
     return (

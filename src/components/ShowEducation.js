@@ -4,7 +4,6 @@ const ShowEducation = (props) => {
     const { dattas } = props;
     //console.log(datta);
     const show=(value)=>{
-        console.log(value);
         props.parent(value);
     }
     return (

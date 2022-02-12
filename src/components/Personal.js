@@ -26,7 +26,6 @@ class Personal extends Component{
     }
     handleSubmit(event){
         event.preventDefault();
-        //console.log(this.state);
         this.props.parentCallback(this.state);
     }
     render(){

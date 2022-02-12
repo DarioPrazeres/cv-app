@@ -3,7 +3,6 @@ import React from "react";
 const ViewReference = (props) => {
     const { refs } = props;
     const showCont=(value)=>{
-        console.log(value);
         props.parent(value);
     }
     return (

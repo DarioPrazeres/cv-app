@@ -27,7 +27,6 @@ class Education extends Component{
         this.setState({
             cont: this.state.cont + 1,
         });
-        console.log(this.state);
         this.props.parentCallback(this.state);
         this.setState({
             course: '',

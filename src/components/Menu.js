@@ -47,37 +47,31 @@ class Menu extends Component{
             personal: childDatta,
         });        
         this.showMe("personal");
-        console.log(this.state.personal);
     }
     hundleEducation = (childDatta) =>{
         this.setState({
             educations: this.state.educations.concat(childDatta),
         });  
-        console.log(this.state.educations)
     }
     hundleExperience = (childDatta) =>{
         this.setState({
             experience: this.state.experience.concat(childDatta),
         });  
-        console.log(this.state.experience);
     }
     hundleObjective=(datta)=>{
         this.setState({
             objective: datta,
         });  
-        console.log(this.state.objective);
     }
     hundleReference = (childDatta) =>{
         this.setState({
             reference: this.state.reference.concat(childDatta),
         });  
-        console.log(this.state.reference);
     }
     hundleSkill = (childDatta) =>{
         this.setState({
             skills: this.state.skills.concat(childDatta),
         });  
-        console.log(this.state.skills);
     }
     hundleDeleteSkill=(datta)=>{
         var array = this.state.skills;

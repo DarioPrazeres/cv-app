@@ -3,7 +3,6 @@ import React from "react";
 const View = (props) => {
     const { exps } = props;
     const showCont=(value)=>{
-        console.log(value);
         props.parent(value);
     }
     return (
